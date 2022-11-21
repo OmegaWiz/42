@@ -1,4 +1,4 @@
-int ft_atoi(char *str)
+int ft_atoi(char *nptr)
 {
 	int		neg;
 	long	num;
@@ -7,18 +7,18 @@ int ft_atoi(char *str)
 	neg = 0;
 	num = 0;
 	i = 0;
-	while (str[i] == ' ')
+	while (nptr[i] == ' ')
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	while (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			neg++;
 		i++;
 	}
-	while ('0' <= str[i] && str[i] <= '9')
+	while ('0' <= nptr[i] && nptr[i] <= '9')
 	{
 		num *= 10;
-		num += (str[i] - '0');
+		num += (nptr[i] - '0');
 		i++;
 	}
 	if (neg % 2)
