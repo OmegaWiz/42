@@ -1,3 +1,5 @@
+#include<libft.h>
+
 int ft_atoi(char *nptr)
 {
 	int		neg;
